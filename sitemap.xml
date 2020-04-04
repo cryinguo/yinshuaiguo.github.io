@@ -3,26 +3,26 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://example.com/</loc>
+    <loc>https://yinshuaiguo.gitee.io/myblog/post/my-first-blog/</loc>
     <lastmod>2020-04-04T17:34:47+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://example.com/post/my-first-blog/</loc>
+    <loc>https://yinshuaiguo.gitee.io/myblog/</loc>
     <lastmod>2020-04-04T17:34:47+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://example.com/post/</loc>
+    <loc>https://yinshuaiguo.gitee.io/myblog/post/</loc>
     <lastmod>2020-04-04T17:34:47+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://example.com/categories/</loc>
+    <loc>https://yinshuaiguo.gitee.io/myblog/categories/</loc>
   </url>
   
   <url>
-    <loc>https://example.com/tags/</loc>
+    <loc>https://yinshuaiguo.gitee.io/myblog/tags/</loc>
   </url>
   
 </urlset>
