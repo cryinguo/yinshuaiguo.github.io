@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN">
     <title type="text">myBlog</title>
     <subtitle type="html">MemE 是一个强大且可高度定制的 GoHugo 博客主题，专为个人博客设计。</subtitle>
-    <updated>2020-04-04T18:48:26+08:00</updated>
+    <updated>2020-04-04T20:30:59+08:00</updated>
     <id>https://yinshuaiguo.gitee.io/myblog/</id>
     <link rel="alternate" type="text/html" href="https://yinshuaiguo.gitee.io/myblog/" />
     <link rel="self" type="application/atom+xml" href="https://yinshuaiguo.gitee.io/myblog/atom.xml" />
@@ -17,19 +17,365 @@
     <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights>
     <generator uri="https://gohugo.io/" version="0.68.3">Hugo</generator>
         <entry>
-            <title type="text">My First Blog</title>
+            <title type="text">使用Hugo &#43; Gitee Pages 搭建个人博客</title>
             <link rel="alternate" type="text/html" href="https://yinshuaiguo.gitee.io/myblog/post/my-first-blog/" />
             <id>https://yinshuaiguo.gitee.io/myblog/post/my-first-blog/</id>
-            <updated>2020-04-04T17:34:47+08:00</updated>
+            <updated>2020-04-04T20:29:55+08:00</updated>
             <published>2020-04-04T17:26:52+08:00</published>
             <author>
                     <name>reuixiy</name>
                     <uri>https://io-oi.me/</uri>
                     <email>reuixiy@gmail.com</email>
                     </author>
-            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html"><![CDATA[Hello My Blog ]]></summary>
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights>
+    
+    <summary type="html"><![CDATA[hugo介绍、 Pages 介绍、 为什么选hugo 、 gitee。 以后再补充这些嘿嘿。 第一步:环境……]]></summary>
             
-                <content type="html"><![CDATA[<h3 id="hello-my-blog">Hello My Blog</h3>
+                <content type="html"><![CDATA[<blockquote>
+<p>hugo介绍、 Pages 介绍、</p>
+<p>为什么选hugo 、 gitee。 以后再补充这些嘿嘿。</p>
+</blockquote>
+<h5 id="第一步环境准备">第一步:环境准备</h5>
+<ul>
+<li>
+<p>hugo安装（这里参考<a href="https://gohugo.io/getting-started/installing/">hugo官网</a>即可）</p>
+<blockquote>
+<ol>
+<li>
+<p>如果是直接下载relaease的话，记得下载extended版本，方便支持很多好看的主题</p>
+</li>
+<li>
+<p>下载完成之后添加系统环境变量方便使用, 使用powershell验证安装是否成功。</p>
+<p><img src="http://yinshuaiguo.gitee.io/photo_bed/md_photo/myblog/%E4%BD%BF%E7%94%A8Hugo%20+%20Gitee%20Pages%20%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/b1.png" alt="1585989667702"></p>
+</li>
+</ol>
+</blockquote>
+</li>
+<li>
+<p>注册一个gitee账户（用于进行静态页面托管）</p>
+</li>
+</ul>
+<h5 id="第二步hugo的基本使用">第二步：hugo的基本使用</h5>
+<ol>
+<li>
+<p>在本地新建一个目录作为hugo项目的根目录（本文选择<code>D:\hugo</code>）。</p>
+</li>
+<li>
+<p>在hugo项目的根目录下，使用<code>hugo new site myblog </code>新建一个博客（静态网页）项目，<code>myblog</code>是项目名称。</p>
+<p><img src="http://yinshuaiguo.gitee.io/photo_bed/md_photo/myblog/%E4%BD%BF%E7%94%A8Hugo%20+%20Gitee%20Pages%20%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/b2.png" alt="1585990338957"></p>
+</li>
+<li>
+<p>进入项目目录并查看项目结构</p>
+<p><img src="http://yinshuaiguo.gitee.io/photo_bed/md_photo/myblog/%E4%BD%BF%E7%94%A8Hugo%20+%20Gitee%20Pages%20%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/b3.png" alt="1585990502839"></p>
+<p>content: 是以后写了博客所放置的位置</p>
+<p>themes: 是博客可以定制的主题</p>
+<p>config.toml: 博客的配置文件，包括使用的主题、页面的元素等</p>
+</li>
+<li>
+<p>添加喜欢的主题，可以从<a href="https://hugothemesfree.com/">这里</a>选择自己喜欢的主题，我们选择一款简约的变色主题meme,找到其github项目地址：<a href="https://github.com/reuixiy/hugo-theme-meme">https://github.com/reuixiy/hugo-theme-meme</a> ，下载到themes目录下。</p>
+<ol>
+<li>
+<p>使用git clone 下载到themes目录下并以meme为名保存(没有git的可以直接下载zip文件解压)</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-go" data-lang="go"><span class="nx">git</span> <span class="nx">clone</span> <span class="nx">https</span><span class="p">:</span><span class="c1">//github.com/reuixiy/hugo-theme-meme.git themes/meme
+</span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>使用主题给定的示例config文件。</p>
+<p>把themes\meme\config-examples\zh-cn 目录下的下的config.toml配置文件替换掉hugo根目录下的同名配置文件。</p>
+<p><img src="http://yinshuaiguo.gitee.io/photo_bed/md_photo/myblog/%E4%BD%BF%E7%94%A8Hugo%20+%20Gitee%20Pages%20%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/b4.png" alt="1585991878343"></p>
+</li>
+</ol>
+</li>
+<li>
+<p>在myblog目录下使用命令<code>hugo server</code>启动hugo看看效果</p>
+<p><img src="http://yinshuaiguo.gitee.io/photo_bed/md_photo/myblog/%E4%BD%BF%E7%94%A8Hugo%20+%20Gitee%20Pages%20%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/b5.png" alt="1585992087641"></p>
+<p>使用浏览器打开：<a href="http://localhost:1313/">http://localhost:1313/</a> 可以看到博客主题效果，不过此时还没有文章。</p>
+<p><img src="http://yinshuaiguo.gitee.io/photo_bed/md_photo/myblog/%E4%BD%BF%E7%94%A8Hugo%20+%20Gitee%20Pages%20%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/b6.png" alt="1585992013176"></p>
+</li>
+<li>
+<p>使用<code>hugo new post/my-first-blog.md</code> 写第一篇博客，指令执行完毕会在myblog项目下的content目录下生成<code>post/my-first-blog.md</code>的markdown格式文件，可以使用记事本打开看一下。关于markdown格式的介绍后面补充。</p>
+<p><img src="http://yinshuaiguo.gitee.io/photo_bed/md_photo/myblog/%E4%BD%BF%E7%94%A8Hugo%20+%20Gitee%20Pages%20%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/b7.png" alt="1585992440510"></p>
+<p>使用记事本打开文件如下，</p>
+<p><img src="http://yinshuaiguo.gitee.io/photo_bed/md_photo/myblog/%E4%BD%BF%E7%94%A8Hugo%20+%20Gitee%20Pages%20%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/b8.png" alt="1585992719685"></p>
+<p>在文件中添加内容：</p>
+<p><img src="http://yinshuaiguo.gitee.io/photo_bed/md_photo/myblog/%E4%BD%BF%E7%94%A8Hugo%20+%20Gitee%20Pages%20%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/b9.png" alt="1585992815511"></p>
+<ol start="7">
+<li>
+<p>重新启动hugo server, 使用<code>hugo server -D</code> 可显示草稿状态文稿 ，启动之后再次打开浏览器可以看到文章已经出现了。</p>
+<p><img src="http://yinshuaiguo.gitee.io/photo_bed/md_photo/myblog/%E4%BD%BF%E7%94%A8Hugo%20+%20Gitee%20Pages%20%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/b10.png" alt="1585992966805"></p>
+<p><img src="http://yinshuaiguo.gitee.io/photo_bed/md_photo/myblog/%E4%BD%BF%E7%94%A8Hugo%20+%20Gitee%20Pages%20%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/b11.png" alt="1585992950704"></p>
+</li>
+</ol>
+</li>
+</ol>
+<h5 id="三gitee-pages-使用">三、gitee pages 使用</h5>
+<p>​	只在本地看自己的博客就没有意思了，我们想要把博客放到网上。但是服务器、域名都是要花钱滴，gitee/github pages就给我们提供了一个免费页面托管服务。我们把需要展示的页面上传到gitee上并启动gitee pages服务，之后就可以使用一个给定的url（类<a href="https://yinshuaiguo.gitee.io/blog/">https://yinshuaiguo.gitee.io/blog/</a> ）来访问了。</p>
+<ol>
+<li>
+<p>我们注册一个gitee账号并新建一个仓库，仓库名字就叫myblog吧。</p>
+<p><img src="http://yinshuaiguo.gitee.io/photo_bed/md_photo/myblog/%E4%BD%BF%E7%94%A8Hugo%20+%20Gitee%20Pages%20%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/b12.png" alt="1585993524769"></p>
+<p><img src="http://yinshuaiguo.gitee.io/photo_bed/md_photo/myblog/%E4%BD%BF%E7%94%A8Hugo%20+%20Gitee%20Pages%20%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/b13.png" alt="1585993871386"></p>
+<p><img src="http://yinshuaiguo.gitee.io/photo_bed/md_photo/myblog/%E4%BD%BF%E7%94%A8Hugo%20+%20Gitee%20Pages%20%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/b14.png" alt="1585993922153"></p>
+</li>
+<li>
+<p>接下来，把我们的静态网页推送到这里托管。首先使用<code>hugo -D</code> 生成静态网页，命令执行后会新建一个名为public的目录，并把静态网页信息放进去。</p>
+<p><img src="http://yinshuaiguo.gitee.io/photo_bed/md_photo/myblog/%E4%BD%BF%E7%94%A8Hugo%20+%20Gitee%20Pages%20%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/b15.png" alt="1585994192081"></p>
+</li>
+<li>
+<p>我们进入public目录，使用git推送到gitee</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-go" data-lang="go"><span class="nx">cd</span> <span class="nx">public</span>
+<span class="nx">git</span> <span class="nx">init</span>
+<span class="nx">git</span> <span class="nx">remote</span> <span class="nx">add</span> <span class="nx">origin</span> <span class="nx">https</span><span class="p">:</span><span class="c1">//gitee.com/yinshuaiguo/myblog.git
+</span><span class="c1"></span><span class="nx">git</span> <span class="nx">add</span> <span class="p">.</span>
+<span class="nx">git</span> <span class="nx">commit</span> <span class="o">-</span><span class="nx">m</span> <span class="s">&#34;my blog&#34;</span>
+<span class="nx">git</span> <span class="nx">push</span> <span class="o">--</span><span class="nx">set</span><span class="o">-</span><span class="nx">upstream</span> <span class="nx">origin</span> <span class="nx">master</span>
+</code></pre></td></tr></table>
+</div>
+</div><p><img src="http://yinshuaiguo.gitee.io/photo_bed/md_photo/myblog/%E4%BD%BF%E7%94%A8Hugo%20+%20Gitee%20Pages%20%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/b16.png" alt="git"></p>
+<p>可以在gitee上看到我们上传的代码，接下来进行gitee pages托管。</p>
+<p><img src="http://yinshuaiguo.gitee.io/photo_bed/md_photo/myblog/%E4%BD%BF%E7%94%A8Hugo%20+%20Gitee%20Pages%20%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/b17.png" alt="1585995002649"></p>
+<p>因为我们只上传了静态资源，所以部署目录为整个目录，直接点击启动即可。</p>
+<p><img src="http://yinshuaiguo.gitee.io/photo_bed/md_photo/myblog/%E4%BD%BF%E7%94%A8Hugo%20+%20Gitee%20Pages%20%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/b18.png" alt="1585995080241"></p>
+<p>启动成功后会返回一个网站地址，现在就可以愉快的访问了。</p>
+<p><img src="http://yinshuaiguo.gitee.io/photo_bed/md_photo/myblog/%E4%BD%BF%E7%94%A8Hugo%20+%20Gitee%20Pages%20%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/b19.png" alt="1585995124098"></p>
+<p>打开url展示效果,真是尴尬。显示的完全与localhost不一样，从网上看到原因是配置文件中没有修改baseURL为我们的网址，那接下来修改一下。</p>
+<p><img src="http://yinshuaiguo.gitee.io/photo_bed/md_photo/myblog/%E4%BD%BF%E7%94%A8Hugo%20+%20Gitee%20Pages%20%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/b20.png" alt="1585997055590"></p>
+</li>
+<li>
+<p>修改根目录下的config.toml 文件，baseURL修改为我们获取的地址，title可以改为你想要的文本，title会展示在浏览器页面标签上。</p>
+<p><img src="http://yinshuaiguo.gitee.io/photo_bed/md_photo/myblog/%E4%BD%BF%E7%94%A8Hugo%20+%20Gitee%20Pages%20%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/b21.png" alt="1585997652286"></p>
+</li>
+<li>
+<p>修改完毕后，再次执行一整套部署操作。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-go" data-lang="go"><span class="c1">//编译静态页面
+</span><span class="c1"></span><span class="nx">hugo</span> <span class="o">-</span><span class="nx">D</span>
+<span class="c1">//重新上传
+</span><span class="c1"></span><span class="nx">cd</span> <span class="nx">public</span>
+<span class="nx">git</span> <span class="nx">add</span> <span class="p">.</span>
+<span class="nx">git</span> <span class="nx">commit</span> <span class="o">-</span><span class="nx">m</span> <span class="s">&#34;change baseURL&#34;</span>
+<span class="nx">git</span> <span class="nx">push</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>由于gitee pages 不支持自动部署，所以我们修改了博客之后，记得去更新一下。</p>
+<p><img src="http://yinshuaiguo.gitee.io/photo_bed/md_photo/myblog/%E4%BD%BF%E7%94%A8Hugo%20+%20Gitee%20Pages%20%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/b22.png" alt="1585997887630"></p>
+<p>更新完成之后，我们再次访问一下，发现OK了。以后每次更新了博客都要重复一下这一步骤。</p>
+<p><img src="http://yinshuaiguo.gitee.io/photo_bed/md_photo/myblog/%E4%BD%BF%E7%94%A8Hugo%20+%20Gitee%20Pages%20%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/b23.png" alt="1585997931408"></p>
+</li>
+</ol>
+]]></content>
+            
+            
+            
+            
+            
+                
+                    
+                
+                    
+                
+            
+        </entry>
+    
+        <entry>
+            <title type="text">使用Hugo &#43; Gitee Pages 搭建个人博客</title>
+            <link rel="alternate" type="text/html" href="https://yinshuaiguo.gitee.io/myblog/post/%E4%BD%BF%E7%94%A8hugo-&#43;-gitee-pages-%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" />
+            <id>https://yinshuaiguo.gitee.io/myblog/post/%E4%BD%BF%E7%94%A8hugo-&#43;-gitee-pages-%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</id>
+            <updated>2020-04-04T20:28:54+08:00</updated>
+            <published>2020-04-04T17:26:52+08:00</published>
+            <author>
+                    <name>reuixiy</name>
+                    <uri>https://io-oi.me/</uri>
+                    <email>reuixiy@gmail.com</email>
+                    </author>
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights>
+    
+    <summary type="html"><![CDATA[hugo介绍、 Pages 介绍、 为什么选hugo 、 gitee。 以后再补充这些嘿嘿。 第一步:环境……]]></summary>
+            
+                <content type="html"><![CDATA[<blockquote>
+<p>hugo介绍、 Pages 介绍、</p>
+<p>为什么选hugo 、 gitee。 以后再补充这些嘿嘿。</p>
+</blockquote>
+<h5 id="第一步环境准备">第一步:环境准备</h5>
+<ul>
+<li>
+<p>hugo安装（这里参考<a href="https://gohugo.io/getting-started/installing/">hugo官网</a>即可）</p>
+<blockquote>
+<ol>
+<li>
+<p>如果是直接下载relaease的话，记得下载extended版本，方便支持很多好看的主题</p>
+</li>
+<li>
+<p>下载完成之后添加系统环境变量方便使用, 使用powershell验证安装是否成功。</p>
+<p><img src="http://yinshuaiguo.gitee.io/photo_bed/md_photo/myblog/%E4%BD%BF%E7%94%A8Hugo%20+%20Gitee%20Pages%20%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/b1.png" alt="1585989667702"></p>
+</li>
+</ol>
+</blockquote>
+</li>
+<li>
+<p>注册一个gitee账户（用于进行静态页面托管）</p>
+</li>
+</ul>
+<h5 id="第二步hugo的基本使用">第二步：hugo的基本使用</h5>
+<ol>
+<li>
+<p>在本地新建一个目录作为hugo项目的根目录（本文选择<code>D:\hugo</code>）。</p>
+</li>
+<li>
+<p>在hugo项目的根目录下，使用<code>hugo new site myblog </code>新建一个博客（静态网页）项目，<code>myblog</code>是项目名称。</p>
+<p><img src="http://yinshuaiguo.gitee.io/photo_bed/md_photo/myblog/%E4%BD%BF%E7%94%A8Hugo%20+%20Gitee%20Pages%20%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/b2.png" alt="1585990338957"></p>
+</li>
+<li>
+<p>进入项目目录并查看项目结构</p>
+<p><img src="http://yinshuaiguo.gitee.io/photo_bed/md_photo/myblog/%E4%BD%BF%E7%94%A8Hugo%20+%20Gitee%20Pages%20%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/b3.png" alt="1585990502839"></p>
+<p>content: 是以后写了博客所放置的位置</p>
+<p>themes: 是博客可以定制的主题</p>
+<p>config.toml: 博客的配置文件，包括使用的主题、页面的元素等</p>
+</li>
+<li>
+<p>添加喜欢的主题，可以从<a href="https://hugothemesfree.com/">这里</a>选择自己喜欢的主题，我们选择一款简约的变色主题meme,找到其github项目地址：<a href="https://github.com/reuixiy/hugo-theme-meme">https://github.com/reuixiy/hugo-theme-meme</a> ，下载到themes目录下。</p>
+<ol>
+<li>
+<p>使用git clone 下载到themes目录下并以meme为名保存(没有git的可以直接下载zip文件解压)</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-go" data-lang="go"><span class="nx">git</span> <span class="nx">clone</span> <span class="nx">https</span><span class="p">:</span><span class="c1">//github.com/reuixiy/hugo-theme-meme.git themes/meme
+</span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>使用主题给定的示例config文件。</p>
+<p>把themes\meme\config-examples\zh-cn 目录下的下的config.toml配置文件替换掉hugo根目录下的同名配置文件。</p>
+<p><img src="http://yinshuaiguo.gitee.io/photo_bed/md_photo/myblog/%E4%BD%BF%E7%94%A8Hugo%20+%20Gitee%20Pages%20%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/b4.png" alt="1585991878343"></p>
+</li>
+</ol>
+</li>
+<li>
+<p>在myblog目录下使用命令<code>hugo server</code>启动hugo看看效果</p>
+<p><img src="http://yinshuaiguo.gitee.io/photo_bed/md_photo/myblog/%E4%BD%BF%E7%94%A8Hugo%20+%20Gitee%20Pages%20%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/b5.png" alt="1585992087641"></p>
+<p>使用浏览器打开：<a href="http://localhost:1313/">http://localhost:1313/</a> 可以看到博客主题效果，不过此时还没有文章。</p>
+<p><img src="http://yinshuaiguo.gitee.io/photo_bed/md_photo/myblog/%E4%BD%BF%E7%94%A8Hugo%20+%20Gitee%20Pages%20%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/b6.png" alt="1585992013176"></p>
+</li>
+<li>
+<p>使用<code>hugo new post/my-first-blog.md</code> 写第一篇博客，指令执行完毕会在myblog项目下的content目录下生成<code>post/my-first-blog.md</code>的markdown格式文件，可以使用记事本打开看一下。关于markdown格式的介绍后面补充。</p>
+<p><img src="http://yinshuaiguo.gitee.io/photo_bed/md_photo/myblog/%E4%BD%BF%E7%94%A8Hugo%20+%20Gitee%20Pages%20%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/b7.png" alt="1585992440510"></p>
+<p>使用记事本打开文件如下，</p>
+<p><img src="http://yinshuaiguo.gitee.io/photo_bed/md_photo/myblog/%E4%BD%BF%E7%94%A8Hugo%20+%20Gitee%20Pages%20%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/b8.png" alt="1585992719685"></p>
+<p>在文件中添加内容：</p>
+<p><img src="http://yinshuaiguo.gitee.io/photo_bed/md_photo/myblog/%E4%BD%BF%E7%94%A8Hugo%20+%20Gitee%20Pages%20%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/b9.png" alt="1585992815511"></p>
+<ol start="7">
+<li>
+<p>重新启动hugo server, 使用<code>hugo server -D</code> 可显示草稿状态文稿 ，启动之后再次打开浏览器可以看到文章已经出现了。</p>
+<p><img src="http://yinshuaiguo.gitee.io/photo_bed/md_photo/myblog/%E4%BD%BF%E7%94%A8Hugo%20+%20Gitee%20Pages%20%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/b10.png" alt="1585992966805"></p>
+<p><img src="http://yinshuaiguo.gitee.io/photo_bed/md_photo/myblog/%E4%BD%BF%E7%94%A8Hugo%20+%20Gitee%20Pages%20%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/b11.png" alt="1585992950704"></p>
+</li>
+</ol>
+</li>
+</ol>
+<h5 id="三gitee-pages-使用">三、gitee pages 使用</h5>
+<p>​	只在本地看自己的博客就没有意思了，我们想要把博客放到网上。但是服务器、域名都是要花钱滴，gitee/github pages就给我们提供了一个免费页面托管服务。我们把需要展示的页面上传到gitee上并启动gitee pages服务，之后就可以使用一个给定的url（类<a href="https://yinshuaiguo.gitee.io/blog/">https://yinshuaiguo.gitee.io/blog/</a> ）来访问了。</p>
+<ol>
+<li>
+<p>我们注册一个gitee账号并新建一个仓库，仓库名字就叫myblog吧。</p>
+<p><img src="http://yinshuaiguo.gitee.io/photo_bed/md_photo/myblog/%E4%BD%BF%E7%94%A8Hugo%20+%20Gitee%20Pages%20%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/b12.png" alt="1585993524769"></p>
+<p><img src="http://yinshuaiguo.gitee.io/photo_bed/md_photo/myblog/%E4%BD%BF%E7%94%A8Hugo%20+%20Gitee%20Pages%20%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/b13.png" alt="1585993871386"></p>
+<p><img src="http://yinshuaiguo.gitee.io/photo_bed/md_photo/myblog/%E4%BD%BF%E7%94%A8Hugo%20+%20Gitee%20Pages%20%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/b14.png" alt="1585993922153"></p>
+</li>
+<li>
+<p>接下来，把我们的静态网页推送到这里托管。首先使用<code>hugo -D</code> 生成静态网页，命令执行后会新建一个名为public的目录，并把静态网页信息放进去。</p>
+<p><img src="http://yinshuaiguo.gitee.io/photo_bed/md_photo/myblog/%E4%BD%BF%E7%94%A8Hugo%20+%20Gitee%20Pages%20%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/b15.png" alt="1585994192081"></p>
+</li>
+<li>
+<p>我们进入public目录，使用git推送到gitee</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-go" data-lang="go"><span class="nx">cd</span> <span class="nx">public</span>
+<span class="nx">git</span> <span class="nx">init</span>
+<span class="nx">git</span> <span class="nx">remote</span> <span class="nx">add</span> <span class="nx">origin</span> <span class="nx">https</span><span class="p">:</span><span class="c1">//gitee.com/yinshuaiguo/myblog.git
+</span><span class="c1"></span><span class="nx">git</span> <span class="nx">add</span> <span class="p">.</span>
+<span class="nx">git</span> <span class="nx">commit</span> <span class="o">-</span><span class="nx">m</span> <span class="s">&#34;my blog&#34;</span>
+<span class="nx">git</span> <span class="nx">push</span> <span class="o">--</span><span class="nx">set</span><span class="o">-</span><span class="nx">upstream</span> <span class="nx">origin</span> <span class="nx">master</span>
+</code></pre></td></tr></table>
+</div>
+</div><p><img src="http://yinshuaiguo.gitee.io/photo_bed/md_photo/myblog/%E4%BD%BF%E7%94%A8Hugo%20+%20Gitee%20Pages%20%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/b16.png" alt="git"></p>
+<p>可以在gitee上看到我们上传的代码，接下来进行gitee pages托管。</p>
+<p><img src="http://yinshuaiguo.gitee.io/photo_bed/md_photo/myblog/%E4%BD%BF%E7%94%A8Hugo%20+%20Gitee%20Pages%20%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/b17.png" alt="1585995002649"></p>
+<p>因为我们只上传了静态资源，所以部署目录为整个目录，直接点击启动即可。</p>
+<p><img src="http://yinshuaiguo.gitee.io/photo_bed/md_photo/myblog/%E4%BD%BF%E7%94%A8Hugo%20+%20Gitee%20Pages%20%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/b18.png" alt="1585995080241"></p>
+<p>启动成功后会返回一个网站地址，现在就可以愉快的访问了。</p>
+<p><img src="http://yinshuaiguo.gitee.io/photo_bed/md_photo/myblog/%E4%BD%BF%E7%94%A8Hugo%20+%20Gitee%20Pages%20%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/b19.png" alt="1585995124098"></p>
+<p>打开url展示效果,真是尴尬。显示的完全与localhost不一样，从网上看到原因是配置文件中没有修改baseURL为我们的网址，那接下来修改一下。</p>
+<p><img src="http://yinshuaiguo.gitee.io/photo_bed/md_photo/myblog/%E4%BD%BF%E7%94%A8Hugo%20+%20Gitee%20Pages%20%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/b20.png" alt="1585997055590"></p>
+</li>
+<li>
+<p>修改根目录下的config.toml 文件，baseURL修改为我们获取的地址，title可以改为你想要的文本，title会展示在浏览器页面标签上。</p>
+<p><img src="http://yinshuaiguo.gitee.io/photo_bed/md_photo/myblog/%E4%BD%BF%E7%94%A8Hugo%20+%20Gitee%20Pages%20%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/b21.png" alt="1585997652286"></p>
+</li>
+<li>
+<p>修改完毕后，再次执行一整套部署操作。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-go" data-lang="go"><span class="c1">//编译静态页面
+</span><span class="c1"></span><span class="nx">hugo</span> <span class="o">-</span><span class="nx">D</span>
+<span class="c1">//重新上传
+</span><span class="c1"></span><span class="nx">cd</span> <span class="nx">public</span>
+<span class="nx">git</span> <span class="nx">add</span> <span class="p">.</span>
+<span class="nx">git</span> <span class="nx">commit</span> <span class="o">-</span><span class="nx">m</span> <span class="s">&#34;change baseURL&#34;</span>
+<span class="nx">git</span> <span class="nx">push</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>由于gitee pages 不支持自动部署，所以我们修改了博客之后，记得去更新一下。</p>
+<p><img src="http://yinshuaiguo.gitee.io/photo_bed/md_photo/myblog/%E4%BD%BF%E7%94%A8Hugo%20+%20Gitee%20Pages%20%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/b22.png" alt="1585997887630"></p>
+<p>更新完成之后，我们再次访问一下，发现OK了。以后每次更新了博客都要重复一下这一步骤。</p>
+<p><img src="http://yinshuaiguo.gitee.io/photo_bed/md_photo/myblog/%E4%BD%BF%E7%94%A8Hugo%20+%20Gitee%20Pages%20%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/b23.png" alt="1585997931408"></p>
+</li>
+</ol>
 ]]></content>
             
             
