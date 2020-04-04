@@ -4,22 +4,27 @@
   
   <url>
     <loc>https://yinshuaiguo.gitee.io/myblog/</loc>
-    <lastmod>2020-04-04T20:29:55+08:00</lastmod>
+    <lastmod>2020-04-04T17:26:52+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://yinshuaiguo.gitee.io/myblog/post/</loc>
-    <lastmod>2020-04-04T20:29:55+08:00</lastmod>
+    <lastmod>2020-04-04T17:26:52+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://yinshuaiguo.gitee.io/myblog/post/my-first-blog/</loc>
-    <lastmod>2020-04-04T20:29:55+08:00</lastmod>
+    <loc>https://yinshuaiguo.gitee.io/myblog/post/%E4%BD%BF%E7%94%A8Hugo-&#43;-Gitee-Pages-%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</loc>
+    <lastmod>2020-04-04T17:26:52+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://yinshuaiguo.gitee.io/myblog/post/%E4%BD%BF%E7%94%A8hugo-&#43;-gitee-pages-%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</loc>
-    <lastmod>2020-04-04T20:28:54+08:00</lastmod>
+    <loc>https://yinshuaiguo.gitee.io/myblog/archives/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://yinshuaiguo.gitee.io/myblog/search/</loc>
+    <priority>0</priority>
   </url>
   
   <url>
