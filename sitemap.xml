@@ -3,7 +3,17 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://yinshuaiguo.gitee.io/myblog/</loc>
+    <loc>https://yinshuaiguo.gitee.io/myblog/categories/</loc>
+    <lastmod>2020-04-04T17:26:52+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://yinshuaiguo.gitee.io/myblog/categories/Hugo/</loc>
+    <lastmod>2020-04-04T17:26:52+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://yinshuaiguo.gitee.io/myblog/tags/hugo/</loc>
     <lastmod>2020-04-04T17:26:52+08:00</lastmod>
   </url>
   
@@ -13,8 +23,23 @@
   </url>
   
   <url>
-    <loc>https://yinshuaiguo.gitee.io/myblog/post/%E4%BD%BF%E7%94%A8hugo-&#43;-gitee-pages-%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</loc>
+    <loc>https://yinshuaiguo.gitee.io/myblog/tags/</loc>
     <lastmod>2020-04-04T17:26:52+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://yinshuaiguo.gitee.io/myblog/post/2020-4-4-%E4%BD%BF%E7%94%A8hugo&#43;gitee-pages%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</loc>
+    <lastmod>2020-04-04T17:26:52+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://yinshuaiguo.gitee.io/myblog/</loc>
+    <lastmod>2015-03-10T00:13:27+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://yinshuaiguo.gitee.io/myblog/about/</loc>
+    <lastmod>2015-03-10T00:13:27+00:00</lastmod>
   </url>
   
   <url>
@@ -25,14 +50,6 @@
   <url>
     <loc>https://yinshuaiguo.gitee.io/myblog/search/</loc>
     <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://yinshuaiguo.gitee.io/myblog/categories/</loc>
-  </url>
-  
-  <url>
-    <loc>https://yinshuaiguo.gitee.io/myblog/tags/</loc>
   </url>
   
 </urlset>
