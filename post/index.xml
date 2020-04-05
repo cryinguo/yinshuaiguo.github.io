@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on myBlog</title>
-    <link>https://yinshuaiguo.gitee.io/myblog/post/</link>
+    <link>https://yinshuaiguo.github.io/post/</link>
     <description>Recent content in Posts on myBlog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     <lastBuildDate>Sat, 04 Apr 2020 17:26:52 +0800</lastBuildDate>
     
-	<atom:link href="https://yinshuaiguo.gitee.io/myblog/post/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://yinshuaiguo.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>使用Hugo &#43; Gitee Pages 搭建个人博客</title>
-      <link>https://yinshuaiguo.gitee.io/myblog/post/2020-4-4-%E4%BD%BF%E7%94%A8hugo&#43;gitee-pages%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</link>
+      <link>https://yinshuaiguo.github.io/post/2020-4-4-%E4%BD%BF%E7%94%A8hugo&#43;gitee-pages%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</link>
       <pubDate>Sat, 04 Apr 2020 17:26:52 +0800</pubDate>
       
-      <guid>https://yinshuaiguo.gitee.io/myblog/post/2020-4-4-%E4%BD%BF%E7%94%A8hugo&#43;gitee-pages%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</guid>
+      <guid>https://yinshuaiguo.github.io/post/2020-4-4-%E4%BD%BF%E7%94%A8hugo&#43;gitee-pages%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</guid>
       <description>hugo介绍、 Pages 介绍、 为什么选hugo 、 gitee。 以后再补充这些嘿嘿。 第一步:环境准备 hugo安装（这里参考hugo官网即可） 如果是直接下载relaease的话，记得下载extended版本，方便支持很多好看的主题 下载完成之后添加系统环境变量方便使用, 使用powershell验</description>
     </item>
     
